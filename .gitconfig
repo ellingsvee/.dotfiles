@@ -1,0 +1,69 @@
+[user]
+	name = ellingsvee
+	email = elling.svee@gmail.com
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = zdiff3
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[alias]
+    # ==== Everyday shortcuts ====
+    st = status -s                      # Short status
+    sta = status                        # Full status
+    lg = log --oneline --graph --decorate --all   # Visual commit graph
+    last = log -1 HEAD                   # Show last commit
+    conf = config --global --edit        # Open global config
+    ci = commit                          # Commit shortcut
+    sw = switch                          # Switch branches
+    re = restore                         # Restore file to last commit
+    rea = restore .                      # Restore all files in working directory
+    res = restore --staged               # Unstage staged files
+    aa = add -A                          # Add all changes
+    d = diff                             # Show unstaged changes
+    dc = diff --cached                   # Show staged changes
+
+    # ==== Cleaning & maintenance ====
+    cdf = clean -df                      # Remove untracked files and dirs
+    bd = branch -d                       # Delete branch (safe)
+    rpo = remote prune origin             # Remove stale remote branches
+    fetch-all = fetch --all --prune      # Fetch and clean up all remotes
+
+    # ==== Branch navigation ====
+    br = branch                          # List branches
+    bra = branch -a                      # List local + remote branches
+    switch-main = "!git switch $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')" # Switch to default branch
+
+    # ==== Pulling & pushing ====
+    pr = pull --rebase                   # Pull without merge commit
+    po = push origin                     # Push to origin
+    pf = push --force-with-lease         # Safe force push
+
+    # ==== Commit editing ====
+    am = commit --amend --no-edit  # Add new changes to last commit
+    amend = commit -a --amend --no-edit  # Add new changes to last commit
+    undo = reset --soft HEAD~1           # Undo last commit but keep changes
+
+    # ==== Stash management ====
+    sa = stash push                      # Stash current changes
+    sap = stash apply                    # Apply latest stash
+    sp = stash pop                       # Apply and remove latest stash
+    sl = stash list                      # List stashes
+
+    # ==== Rebase & cherry-pick ====
+    ri = rebase -i                       # Interactive rebase
+    rc = rebase --continue               # Continue rebase after conflict
+    ra = rebase --abort                   # Abort rebase
+    cp = cherry-pick                     # Cherry-pick commits
+
+    # ==== Review & inspection ====
+    who = shortlog -sn                   # Commit counts by author
+    blame = blame -w                      # Blame ignoring whitespace
+    check = fsck                         # Check repo integrity
+
