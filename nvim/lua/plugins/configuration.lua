@@ -45,6 +45,7 @@ return {
       statuscolumn = { enabled = false }, -- we set this in options.lua
       toggle = { map = LazyVim.safe_keymap_set },
       words = { enabled = false },
+      dashboard = { enabled = false },
     },
   },
 
@@ -87,19 +88,5 @@ return {
         end
       end, { desc = "Jump to prev location" })
     end,
-  },
-
-  -- add pyright to lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
-        ruff = {},
-      },
-    },
   },
 }
