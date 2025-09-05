@@ -6,3 +6,21 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+-- wrap and check for spell in latex
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "latex", "tex" },
+  callback = function()
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+  end,
+})
+
+-- sortcut for fixing spelling errors
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "latex", "tex" },
+  callback = function()
+    -- mapping: Ctrl+. to correct previous spelling mistake
+    vim.api.nvim_buf_set_keymap(0, "i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
+  end,
+})
