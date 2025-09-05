@@ -48,4 +48,33 @@ return {
       dashboard = { enabled = false },
     },
   },
+
+  -- add timymist to the lspconfig
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   ---@class PluginLspOpts
+  --   opts = {
+  --     ---@type lspconfig.options
+  --     servers = {
+  --       -- pyright will be automatically installed with mason and loaded with lspconfig
+  --       timymist = {
+  --         settings = {
+  --           formatterMode = "typstyle",
+  --           exportPdf = "onType",
+  --           semanticTokens = "disable",
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
+
+  -- add any tools you want to have installed below
+  -- {
+  --   "williamboman/mason.nvim",
+  --   opts = {
+  --     ensure_installed = {
+  --       "tinymist",
+  --     },
+  --   },
+  -- },
 }

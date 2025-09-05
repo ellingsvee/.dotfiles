@@ -9,7 +9,7 @@
 
 -- wrap and check for spell in latex
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "latex", "tex" },
+  pattern = { "latex", "tex", "typst", "typ" },
   callback = function()
     vim.opt_local.wrap = true
     vim.opt_local.spell = true
@@ -18,9 +18,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- sortcut for fixing spelling errors
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "latex", "tex" },
+  pattern = { "latex", "tex", "typst", "typ" },
   callback = function()
     -- mapping: Ctrl+. to correct previous spelling mistake
-    vim.api.nvim_buf_set_keymap(0, "i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
+    vim.api.nvim_buf_set_keymap(0, "i", "<C-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
   end,
 })
