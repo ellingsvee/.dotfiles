@@ -48,45 +48,4 @@ return {
       dashboard = { enabled = false },
     },
   },
-
-  {
-    "L3MON4D3/LuaSnip",
-    config = function()
-      local ls = require("luasnip")
-
-      -- Setup options
-      ls.config.setup({
-        update_events = { "TextChanged", "TextChangedI" },
-        enable_autosnippets = true,
-        store_selection_keys = "<Tab>",
-      })
-      -- Load your custom snippets from lua/snippets
-      require("luasnip.loaders.from_lua").lazy_load({ paths = "~/.config/nvim/lua/snippets/" })
-
-      -- Keymaps for choice nodes
-      vim.keymap.set({ "i", "s" }, "<C-n>", function()
-        if ls.choice_active() then
-          ls.change_choice(1)
-        end
-      end, { desc = "Cycle to next choice in Luasnip" })
-
-      vim.keymap.set({ "i", "s" }, "<C-p>", function()
-        if ls.choice_active() then
-          ls.change_choice(-1)
-        end
-      end, { desc = "Cycle to previous choice in Luasnip" })
-
-      vim.keymap.set({ "i", "s" }, "<C-l>", function()
-        if ls.expand_or_locally_jumpable() then
-          ls.expand_or_jump()
-        end
-      end, { desc = "Jump to next location" })
-
-      vim.keymap.set({ "i", "s" }, "<C-h>", function()
-        if ls.locally_jumpable(-1) then
-          ls.jump(-1)
-        end
-      end, { desc = "Jump to prev location" })
-    end,
-  },
 }
