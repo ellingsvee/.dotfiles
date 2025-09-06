@@ -1,0 +1,7 @@
+set selection-clipboard clipboard
+# set highlight-active-color "#ffffff"
+# set highlight-transparency 1
+
+set scroll-step 1
+set scroll-hstep 1
+# set zoom-step 1
