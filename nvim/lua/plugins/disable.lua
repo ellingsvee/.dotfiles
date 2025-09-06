@@ -47,8 +47,6 @@ return {
   -- disable noice
   { "folke/noice.nvim", enabled = false },
 
-
   -- diasble the custom LazyVim dashboard
   { "nvimdev/dashboard-nvim", enabled = false },
-
 }

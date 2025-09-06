@@ -1,3 +1,5 @@
+-- Use the following command to restart dbus-daemon
+-- dbus-daemon --fork --session --address=$DBUS_SESSION_BUS_ADDRESS
 return {
   "lervag/vimtex",
   config = function()
@@ -15,5 +17,10 @@ return {
 
     -- Disable matchparen for better LaTeX experience
     vim.g.loaded_matchparen = 1
+
+    --vimtex_view_settings
+    -- vim.g.vimtex_view_method = "skim"
+    vim.g.vimtex_view_method = "zathura"
+    vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
   end,
 }

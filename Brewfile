@@ -1,5 +1,7 @@
 tap "homebrew-zathura/zathura"
 tap "nikitabobko/tap"
+# Message bus system, providing inter-application communication
+brew "dbus", restart_service: :changed
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Modern, maintained replacement for ls
@@ -44,20 +46,14 @@ brew "tmux"
 brew "typst"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Fake keyboard/mouse input and window management for X
+brew "xdotool"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # PDF viewer
 brew "homebrew-zathura/zathura/zathura", args: ["with-synctex"]
-# Comic book plugin for zathura
-brew "homebrew-zathura/zathura/zathura-cb"
-# DJVU plugin for zathura
-brew "homebrew-zathura/zathura/zathura-djvu"
-# MuPDF backend plugin for zathura
-brew "homebrew-zathura/zathura/zathura-pdf-mupdf"
 # Poppler backend plugin for zathura
 brew "homebrew-zathura/zathura/zathura-pdf-poppler"
-# Postscript backend plugin for zathura
-brew "homebrew-zathura/zathura/zathura-ps"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
 cask "font-jetbrains-mono-nerd-font"
@@ -66,6 +62,10 @@ cask "font-symbols-only-nerd-font"
 cask "karabiner-elements"
 # GPU-based terminal emulator
 cask "kitty"
+# Native desktop app for Messenger (formerly Facebook Messenger)
+cask "messenger"
+# PDF reader and note-taking application
+cask "skim"
 # Music streaming service
 cask "spotify"
 # Open-source code editor

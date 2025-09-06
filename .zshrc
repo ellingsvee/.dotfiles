@@ -110,3 +110,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Bat theme
 export BAT_THEME="1337"
+
+# For using vimtex with Zotero
+export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
