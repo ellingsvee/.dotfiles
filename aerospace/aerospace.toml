@@ -55,11 +55,11 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 1
-inner.vertical =   1
-outer.left =       1
-outer.bottom =     1
-outer.top =        1
-outer.right =      1
+inner.vertical = 1
+outer.left = 1
+outer.bottom = 1
+outer.top = 1
+outer.right = 1
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -93,7 +93,10 @@ outer.right =      1
 # alt-period = 'layout accordion horizontal vertical'
 
 alt-comma = 'layout tiles horizontal accordion vertical' # Toggle between tiles and accordion
-alt-period = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+alt-period = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
@@ -122,6 +125,7 @@ alt-b = 'workspace B'
 alt-c = 'workspace C'
 # alt-t = 'workspace T'
 alt-s = 'workspace S'
+alt-o = 'workspace O'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -138,15 +142,14 @@ alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-s = 'move-node-to-workspace S'
 alt-shift-c = 'move-node-to-workspace C'
 alt-shift-s = 'move-node-to-workspace S'
+alt-shift-o = 'move-node-to-workspace O'
+
 # alt-shift-e = 'move-node-to-workspace E'
 # alt-shift-m = 'move-node-to-workspace M'
 # alt-shift-n = 'move-node-to-workspace N'
 # alt-shift-p = 'move-node-to-workspace P'
 # alt-shift-t = 'move-node-to-workspace T'
 # alt-shift-v = 'move-node-to-workspace V'
-
-
-
 
 
 # alt-shift-f = 'fullscreen'
@@ -201,6 +204,7 @@ alt-shift-r = 'balance-sizes'
 # alt-shift-k = ['join-with up', 'mode main']
 # alt-shift-l = ['join-with right', 'mode main']
 
+# https://nikitabobko.github.io/AeroSpace/goodies#popular-apps-ids
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = ['move-node-to-workspace B']
@@ -229,5 +233,3 @@ run = ['move-node-to-workspace C']
 #
 # C = ['secondary', 'main']
 # B = 'main'
-
-
