@@ -77,6 +77,7 @@ alias nv='nvim'
 alias c='clear'
 alias lg='lazygit'
 alias g='git'
+alias zathura='open -a Zathura' # By default launch zathura in the background
 
 # Tmux attach
 function tat {
