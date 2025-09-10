@@ -73,6 +73,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias ls='eza'
+alias n='nvim'
 alias nv='nvim'
 alias c='clear'
 alias lg='lazygit'
