@@ -1,6 +1,8 @@
 return {
   "MagicDuck/grug-far.nvim",
   keys = {
+    -- disable keymap (sr) and instead move it to another (sR)
+    { "<leader>sr", false },
     {
       "<leader>sR",
       function()
