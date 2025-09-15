@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+  cond = not vim.g.vscode, -- normal behavior
   keys = {
     { "<leader><space>", false }, -- Disable as I instead use this as a keymap
     { "<leader>sf", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
@@ -9,7 +10,18 @@ return {
       "<leader>ss",
       function()
         require("telescope.builtin").lsp_document_symbols({
-          symbols = { "function", "class", "method" },
+          symbols = {
+            "function",
+            "class",
+            "method",
+            "struct",
+            "object",
+            "enum",
+            "interface",
+            "namespace",
+            "macro",
+            "typedef",
+          },
         })
       end,
       desc = "Search through functions etc.",
