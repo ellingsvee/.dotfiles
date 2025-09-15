@@ -4,12 +4,18 @@ tap "nikitabobko/tap"
 brew "dbus", restart_service: :changed
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Generate compilation database for clang tooling
+brew "bear"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -18,12 +24,18 @@ brew "git"
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
+# Command-driven, interactive function plotting
+brew "gnuplot"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Portable Foreign Function Interface library
+brew "libffi"
 # LLVM's OpenMP runtime library
 brew "libomp"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Utility for directing compilation
 brew "make"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -84,5 +96,9 @@ vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
 vscode "rust-lang.rust-analyzer"
 vscode "vscodevim.vim"
