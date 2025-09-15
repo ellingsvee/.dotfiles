@@ -1,6 +1,6 @@
 -- See https://github.com/honza/vim-snippets/blob/master/snippets/c.snippets
 
-local ls = require 'luasnip'
+local ls = require("luasnip")
 local f = ls.function_node
 local d = ls.dynamic_node
 local r = ls.restore_node
@@ -23,65 +23,65 @@ local function v(pos, default_text)
 end
 
 M = {
-  s({ trig = 'def', name = 'Define', snippetType = 'autosnippet' }, {
+  s({ trig = "def", name = "Define", snippetType = "autosnippet", wordTrig = false }, {
     f(function(_, snip)
       return snip.captures[1]
     end),
-    t '#define',
+    t("#define"),
   }),
-  s({ trig = 'inc', name = 'Include', snippetType = 'autosnippet' }, {
-    t '#include <',
+  s({ trig = "inc", name = "Include", snippetType = "autosnippet", wordTrig = false }, {
+    t("#include <"),
     d(1, get_visual),
-    t '.h>',
+    t(".h>"),
   }),
-  s({ trig = 'for', name = 'For Loop', snippetType = 'autosnippet' }, {
-    t 'for (int ',
-    i(1, 'i'), -- loop variable
-    t ' = 0; ',
+  s({ trig = "for", name = "For Loop", snippetType = "autosnippet", wordTrig = false }, {
+    t("for (int "),
+    i(1, "i"), -- loop variable
+    t(" = 0; "),
     rep(1), -- reuse loop variable
-    t ' < ',
+    t(" < "),
     d(2, get_visual),
-    t '; ',
+    t("; "),
     rep(1), -- reuse loop variable again
-    i(3, '++'), -- increment
-    t ') {',
-    t { '', '\t' },
+    i(3, "++"), -- increment
+    t(") {"),
+    t({ "", "\t" }),
     i(4),
-    t { '', '}' },
+    t({ "", "}" }),
   }),
-  s({ trig = 'fun', name = 'Function Definition', snippetType = 'autosnippet' }, {
-    i(1, 'void'), -- return type
-    t ' ',
+  s({ trig = "fun", name = "Function Definition", snippetType = "autosnippet", wordTrig = false }, {
+    i(1, "void"), -- return type
+    t(" "),
     d(2, get_visual),
-    t '(',
+    t("("),
     i(3), -- parameters
-    t ') {',
-    t { '', '\t' },
+    t(") {"),
+    t({ "", "\t" }),
     i(4), -- function body
-    t { '', '}' },
+    t({ "", "}" }),
   }),
-  s({ trig = 'wh', name = 'While Loop', snippetType = 'autosnippet' }, {
-    t 'while (',
+  s({ trig = "wh", name = "While Loop", snippetType = "autosnippet", wordTrig = false }, {
+    t("while ("),
     d(1, get_visual),
-    t ') {',
-    t { '', '\t' },
+    t(") {"),
+    t({ "", "\t" }),
     d(2, get_visual), -- visual fallback or insert node
-    t { '', '}' },
+    t({ "", "}" }),
   }),
-  s({ trig = 'pr', name = 'printf', snippetType = 'autosnippet' }, {
-    t 'printf("',
+  s({ trig = "pr", name = "printf", snippetType = "autosnippet", wordTrig = false }, {
+    t('printf("'),
     d(1, get_visual),
-    t '\\n"',
+    t('\\n"'),
     i(2), -- arguments
-    t ');',
+    t(");"),
   }),
-  s({ trig = 'if', name = 'If Statement', snippetType = 'autosnippet' }, {
-    t 'if (',
-    d(1, get_visual, {}, { user_args = { 'condition' } }),
-    t ') {',
-    t { '', '\t' },
-    d(2, get_visual, {}, { user_args = { 'body' } }),
-    t { '', '}' },
+  s({ trig = "if", name = "If Statement", snippetType = "autosnippet", wordTrig = false }, {
+    t("if ("),
+    d(1, get_visual, {}, { user_args = { "condition" } }),
+    t(") {"),
+    t({ "", "\t" }),
+    d(2, get_visual, {}, { user_args = { "body" } }),
+    t({ "", "}" }),
   }),
 }
 
