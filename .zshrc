@@ -80,6 +80,7 @@ alias c='clear'
 alias lg='lazygit'
 alias g='git'
 alias zathura='open -a Zathura' # By default launch zathura in the background
+alias r="radian" # Use the updated R terminal
 
 # Tmux attach
 function tat {
