@@ -1,0 +1,25 @@
+# docs:
+# ghostty +show-config --default --docs | nvim
+
+# ghostty +list-fonts
+# ghostty +list-keybinds --default
+
+font-size = 14
+
+alpha-blending = linear-corrected
+
+# macos-titlebar-style = tabs
+# macos-titlebar-proxy-icon = hidden
+macos-option-as-alt = true
+
+# background-opacity = 0.96
+# background-blur-radius = 40
+
+# ghostty +list-themes
+theme = dark:GitHub Dark High Contrast,light:GitHub Light High Contrast
+
+mouse-hide-while-typing = true
+window-inherit-working-directory = false
+working-directory = home
+
+window-decoration = none
