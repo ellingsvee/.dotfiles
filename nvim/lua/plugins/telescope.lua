@@ -1,6 +1,13 @@
 return {
   "nvim-telescope/telescope.nvim",
   cond = not vim.g.vscode, -- normal behavior
+  dependencies = {
+    -- This is for begin able to search in the snippets.
+    {
+      "benfowler/telescope-luasnip.nvim",
+      module = "telescope._extensions.luasnip",
+    },
+  },
   keys = {
     { "<leader><space>", false }, -- Disable as I instead use this as a keymap
     { "<leader>sf", LazyVim.pick("files"), desc = "Find Files (Root Dir)" },
@@ -25,6 +32,13 @@ return {
         })
       end,
       desc = "Search through functions etc.",
+    },
+    {
+      "<leader>sl",
+      function()
+        require("telescope").extensions.luasnip.luasnip()
+      end,
+      desc = "Search through Luasnip snippets",
     },
   },
 }
