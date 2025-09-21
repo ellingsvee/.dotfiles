@@ -10,7 +10,7 @@ alpha-blending = linear-corrected
 
 # macos-titlebar-style = tabs
 # macos-titlebar-proxy-icon = hidden
-macos-option-as-alt = true
+macos-option-as-alt = false
 
 # background-opacity = 0.96
 # background-blur-radius = 40
@@ -23,3 +23,5 @@ window-inherit-working-directory = false
 working-directory = home
 
 window-decoration = none
+
+font-family = Menlo
