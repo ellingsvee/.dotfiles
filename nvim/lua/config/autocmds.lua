@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- sortcut for fixing spelling errors
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "latex", "tex", "typst", "typ" },
+  pattern = { "latex", "tex", "typst", "typ", "markdown", "md" },
   callback = function()
     -- mapping: Ctrl+. to correct previous spelling mistake
     vim.api.nvim_buf_set_keymap(0, "i", "<C-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
