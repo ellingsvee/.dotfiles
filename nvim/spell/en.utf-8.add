@@ -166,3 +166,12 @@ parameterizations
 hotspots
 discretizes
 psu
+advection
+Navier
+geostatistics
+Darcys
+caprock
+asyclic
+Markovian
+Sleipner
+Serinv

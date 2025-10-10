@@ -22,3 +22,6 @@ local opt = vim.opt
 
 -- The cursor remains a block in insert mode
 -- opt.guicursor = ""
+
+-- Autoread files
+opt.autoread = true

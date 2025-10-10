@@ -24,3 +24,15 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.api.nvim_buf_set_keymap(0, "i", "<C-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true, silent = true })
   end,
 })
+
+-- Reload file if changed outside of Neovim
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  command = "checktime",
+})
+
+-- Optional message when reloading
+-- vim.api.nvim_create_autocmd("FileChangedShellPost", {
+--   callback = function()
+--     vim.notify("File changed on disk. Buffer reloaded!", vim.log.levels.WARN)
+--   end,
+-- })

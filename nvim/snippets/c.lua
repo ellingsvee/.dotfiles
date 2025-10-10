@@ -68,13 +68,13 @@ M = {
     d(2, get_visual), -- visual fallback or insert node
     t({ "", "}" }),
   }),
-  s({ trig = "pr", name = "printf", snippetType = "autosnippet", wordTrig = false }, {
-    t('printf("'),
-    d(1, get_visual),
-    t('\\n"'),
-    i(2), -- arguments
-    t(");"),
-  }),
+  -- s({ trig = "pr", name = "printf", snippetType = "autosnippet", wordTrig = false }, {
+  --   t('printf("'),
+  --   d(1, get_visual),
+  --   t('\\n"'),
+  --   i(2), -- arguments
+  --   t(");"),
+  -- }),
   s({ trig = "if", name = "If Statement", snippetType = "autosnippet", wordTrig = false }, {
     t("if ("),
     d(1, get_visual, {}, { user_args = { "condition" } }),
