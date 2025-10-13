@@ -16,9 +16,8 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Load pure theme
-zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
-# zinit ice turbo wait'0' pick"async.zsh" src"pure.zsh"
-zinit light sindresorhus/pure
+# zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
+# zinit light sindresorhus/pure
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -101,17 +100,11 @@ function tat {
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+# eval "$(zoxide init zsh --hook none)"
+eval "$(starship init zsh)"
 
 # . "$HOME/.local/bin/env"
 . "$HOME/.cargo/env"
-
-# # pnpm
-# export PNPM_HOME="/Users/ellingsvee/Library/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# # pnpm end
 
 # Bat theme
 export BAT_THEME="1337"
@@ -120,4 +113,4 @@ export BAT_THEME="1337"
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 
 # Run fastfetch
-fastfetch
+# fastfetch
