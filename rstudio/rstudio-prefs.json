@@ -1,3 +1,7 @@
 {
-    "jobs_tab_visibility": "shown"
+    "jobs_tab_visibility": "shown",
+    "show_terminal_tab": false,
+    "initial_working_directory": "~",
+    "editor_keybindings": "vim",
+    "posix_terminal_shell": "bash"
 }
