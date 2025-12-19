@@ -25,3 +25,7 @@ working-directory = home
 window-decoration = none
 
 font-family = Menlo
+
+# SSH terminfo handling
+# Automatically copy terminfo to remote servers and fallback to xterm-256color
+shell-integration-features = ssh-terminfo,ssh-env
