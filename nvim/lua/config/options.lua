@@ -24,4 +24,5 @@ local opt = vim.opt
 -- opt.guicursor = ""
 
 -- Autoread files
+-- Note: You can autoread with the :e command
 opt.autoread = true

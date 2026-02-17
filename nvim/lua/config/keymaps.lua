@@ -21,3 +21,20 @@ vim.keymap.set("n", "*", "*N", { desc = "Make * highlight the current word", nor
 
 -- -- Quit using C-q
 vim.keymap.set("n", "<C-q>", ":q<CR>", { desc = "Quit current buffer", noremap = true, silent = true })
+
+-- Toggle spelllang between English and Norwegian
+vim.keymap.set("n", "<leader>tl", function()
+  if vim.opt.spelllang:get()[1] == "en" then
+    vim.opt.spelllang = "nb"
+    vim.notify("Spelllang: nb (Norwegian)")
+  else
+    vim.opt.spelllang = "en"
+    vim.notify("Spelllang: en (English)")
+  end
+end, { desc = "Toggle spelllang (en/nb)" })
+
+-- Auto-reload buffers changed on disk with <leader>R
+vim.keymap.set("n", "<leader>R", function()
+  vim.cmd("bufdo checktime")
+  print("Checked all buffers for external changes")
+end, { desc = "Reload buffers changed on disk" })

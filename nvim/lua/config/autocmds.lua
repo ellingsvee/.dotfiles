@@ -25,10 +25,10 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- Reload file if changed outside of Neovim
-vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
-  command = "checktime",
-})
+-- -- Reload file if changed outside of Neovim
+-- vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+--   command = "checktime",
+-- })
 
 -- Optional message when reloading
 -- vim.api.nvim_create_autocmd("FileChangedShellPost", {

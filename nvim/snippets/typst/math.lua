@@ -88,10 +88,15 @@ M = {
   }),
 
   s({ trig = "dm", name = "Display math", snippetType = "autosnippet" }, {
-    t({ "$ ", "  " }),
+    t({ "$", "  " }),
     i(1),
     t({ "", "$" }),
   }),
+  -- s({ trig = "dm", name = "Display math", snippetType = "autosnippet" }, {
+  --   t({ "#math.equation(block: true, numbering: none)[$ ", "  " }),
+  --   i(1),
+  --   t({ "", "$]" }),
+  -- }),
 
   -- Math font/style snippets
   s({ trig = "mc", name = "Calligraphic", snippetType = "autosnippet", wordTrig = false }, {
@@ -114,6 +119,12 @@ M = {
 
   s({ trig = "bs", name = "Bold symbol", snippetType = "autosnippet", wordTrig = false }, {
     t("bold("),
+    d(1, get_visual),
+    t(")"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+
+  s({ trig = "cl", name = "Mathcal", snippetType = "autosnippet", wordTrig = false }, {
+    t("cal("),
     d(1, get_visual),
     t(")"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
@@ -334,17 +345,21 @@ M = {
     t("circle.stroked.small"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "!=", name = "Not equal", snippetType = "autosnippet", wordTrig = false }, {
-    t("eq.not"),
+  s({ trig = "imp", name = "Implies", snippetType = "autosnippet", wordTrig = false }, {
+    t("arrow.r.double.long"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "<=", name = "Less equal", snippetType = "autosnippet", wordTrig = false }, {
-    t("lt.eq"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "!=", name = "Not equal", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("eq.not"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ">=", name = "Greater equal", snippetType = "autosnippet", wordTrig = false }, {
-    t("gt.eq"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "<=", name = "Less equal", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("lt.eq"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
+
+  -- s({ trig = ">=", name = "Greater equal", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("gt.eq"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = ">>", name = "Much greater", snippetType = "autosnippet", wordTrig = false }, {
     t("gt.double"),
@@ -364,6 +379,11 @@ M = {
 
   s({ trig = "~~", name = "Approximately", snippetType = "autosnippet", wordTrig = false }, {
     t("tilde.op"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+
+  -- Other
+  s({ trig = "del", name = "Partial", snippetType = "autosnippet", wordTrig = false }, {
+    t("partial"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   -- Common functions
@@ -511,123 +531,123 @@ M = {
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   -- Greek letters (semicolon prefix)
-  s({ trig = ";a", name = "alpha", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".a", name = "alpha", snippetType = "autosnippet", wordTrig = false }, {
     t("alpha"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";b", name = "beta", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".b", name = "beta", snippetType = "autosnippet", wordTrig = false }, {
     t("beta"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";g", name = "gamma", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".g", name = "gamma", snippetType = "autosnippet", wordTrig = false }, {
     t("gamma"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";G", name = "Gamma", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".G", name = "Gamma", snippetType = "autosnippet", wordTrig = false }, {
     t("Gamma"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";d", name = "delta", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".d", name = "delta", snippetType = "autosnippet", wordTrig = false }, {
     t("delta"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";D", name = "Delta", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".D", name = "Delta", snippetType = "autosnippet", wordTrig = false }, {
     t("Delta"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";e", name = "epsilon", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".e", name = "epsilon", snippetType = "autosnippet", wordTrig = false }, {
     t("epsilon"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";z", name = "zeta", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".z", name = "zeta", snippetType = "autosnippet", wordTrig = false }, {
     t("zeta"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";t", name = "theta", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".t", name = "theta", snippetType = "autosnippet", wordTrig = false }, {
     t("theta"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";T", name = "Theta", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".T", name = "Theta", snippetType = "autosnippet", wordTrig = false }, {
     t("Theta"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";k", name = "kappa", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".k", name = "kappa", snippetType = "autosnippet", wordTrig = false }, {
     t("kappa"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";l", name = "lambda", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".l", name = "lambda", snippetType = "autosnippet", wordTrig = false }, {
     t("lambda"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";L", name = "Lambda", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".L", name = "Lambda", snippetType = "autosnippet", wordTrig = false }, {
     t("Lambda"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";m", name = "mu", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".m", name = "mu", snippetType = "autosnippet", wordTrig = false }, {
     t("mu"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";n", name = "nu", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".n", name = "nu", snippetType = "autosnippet", wordTrig = false }, {
     t("nu"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";x", name = "xi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".x", name = "xi", snippetType = "autosnippet", wordTrig = false }, {
     t("xi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";X", name = "Xi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".X", name = "Xi", snippetType = "autosnippet", wordTrig = false }, {
     t("Xi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";p", name = "pi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".p", name = "pi", snippetType = "autosnippet", wordTrig = false }, {
     t("pi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";P", name = "Pi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".P", name = "Pi", snippetType = "autosnippet", wordTrig = false }, {
     t("Pi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";r", name = "rho", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".r", name = "rho", snippetType = "autosnippet", wordTrig = false }, {
     t("rho"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";s", name = "sigma", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".s", name = "sigma", snippetType = "autosnippet", wordTrig = false }, {
     t("sigma"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";S", name = "Sigma", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".S", name = "Sigma", snippetType = "autosnippet", wordTrig = false }, {
     t("Sigma"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";t", name = "tau", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".t", name = "tau", snippetType = "autosnippet", wordTrig = false }, {
     t("tau"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";f", name = "phi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".f", name = "phi", snippetType = "autosnippet", wordTrig = false }, {
     t("phi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";F", name = "Phi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".F", name = "Phi", snippetType = "autosnippet", wordTrig = false }, {
     t("Phi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";c", name = "chi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".c", name = "chi", snippetType = "autosnippet", wordTrig = false }, {
     t("chi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";y", name = "psi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".y", name = "psi", snippetType = "autosnippet", wordTrig = false }, {
     t("psi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";Y", name = "Psi", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".Y", name = "Psi", snippetType = "autosnippet", wordTrig = false }, {
     t("Psi"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";o", name = "omega", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".o", name = "omega", snippetType = "autosnippet", wordTrig = false }, {
     t("omega"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ";O", name = "Omega", snippetType = "autosnippet", wordTrig = false }, {
+  s({ trig = ".O", name = "Omega", snippetType = "autosnippet", wordTrig = false }, {
     t("Omega"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
@@ -636,6 +656,11 @@ M = {
     t("lr(("),
     i(1),
     t("))"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  s({ trig = "pa", name = "Parentheses", snippetType = "autosnippet", wordTrig = false }, {
+    t("("),
+    i(1),
+    t(")"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "lr[", name = "Left-right brackets", snippetType = "autosnippet", wordTrig = false }, {
