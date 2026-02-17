@@ -184,18 +184,18 @@ M = {
 
   -- Subscripts and superscripts
   s({ trig = "TT", name = "Transpose", snippetType = "autosnippet", wordTrig = false }, {
-    t("^T"),
+    t("^top"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "inv", name = "Inverse", snippetType = "autosnippet", wordTrig = false }, {
     t("^(-1)"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "_", name = "Subscript", snippetType = "autosnippet", wordTrig = false }, {
-    t("_("),
-    d(1, get_visual),
-    t(")"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "_", name = "Subscript", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("_("),
+  --   d(1, get_visual),
+  --   t(")"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "po", name = "Superscript", snippetType = "autosnippet", wordTrig = false }, {
     t("^("),
@@ -211,14 +211,14 @@ M = {
     t("^3"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  -- Fractions
-  s({ trig = "//", name = "Fraction", snippetType = "autosnippet", wordTrig = false }, {
-    t("frac("),
-    i(1, "num"),
-    t(", "),
-    i(2, "den"),
-    t(")"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- -- Fractions
+  -- s({ trig = "//", name = "Fraction", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("frac("),
+  --   i(1, "num"),
+  --   t(", "),
+  --   i(2, "den"),
+  --   t(")"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "fr", name = "Fraction (alternative)", snippetType = "autosnippet" }, {
     t("frac("),
@@ -235,38 +235,38 @@ M = {
     t(")"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  -- Operators and functions
-  s({ trig = "sum", name = "Sum", snippetType = "autosnippet" }, {
-    t("sum_("),
-    i(1, "i=1"),
-    t(")^("),
-    i(2, "n"),
-    t(") "),
-    i(3),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- -- Operators and functions
+  -- s({ trig = "sum", name = "Sum", snippetType = "autosnippet" }, {
+  --   t("sum_("),
+  --   i(1, "i=1"),
+  --   t(")^("),
+  --   i(2, "n"),
+  --   t(") "),
+  --   i(3),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "prod", name = "Product", snippetType = "autosnippet" }, {
-    t("product_("),
-    i(1, "i=1"),
-    t(")^("),
-    i(2, "n"),
-    t(") "),
-    i(3),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "prod", name = "Product", snippetType = "autosnippet" }, {
+  --   t("product_("),
+  --   i(1, "i=1"),
+  --   t(")^("),
+  --   i(2, "n"),
+  --   t(") "),
+  --   i(3),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "lim", name = "Limit", snippetType = "autosnippet" }, {
-    c(1, {
-      {
-        t("lim_("),
-        i(1, "x -> oo"),
-        t(") "),
-        i(2),
-      },
-      {
-        t("lim"),
-      },
-    }),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "lim", name = "Limit", snippetType = "autosnippet" }, {
+  --   c(1, {
+  --     {
+  --       t("lim_("),
+  --       i(1, "x -> oo"),
+  --       t(") "),
+  --       i(2),
+  --     },
+  --     {
+  --       t("lim"),
+  --     },
+  --   }),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "int", name = "Integral", snippetType = "autosnippet" }, {
     t("integral_("),
@@ -345,9 +345,9 @@ M = {
     t("circle.stroked.small"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "imp", name = "Implies", snippetType = "autosnippet", wordTrig = false }, {
-    t("arrow.r.double.long"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "imp", name = "Implies", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("arrow.r.double.long"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   -- s({ trig = "!=", name = "Not equal", snippetType = "autosnippet", wordTrig = false }, {
   --   t("eq.not"),
@@ -361,21 +361,21 @@ M = {
   --   t("gt.eq"),
   -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = ">>", name = "Much greater", snippetType = "autosnippet", wordTrig = false }, {
-    t("gt.double"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = ">>", name = "Much greater", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("gt.double"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
+  --
+  -- s({ trig = "<<", name = "Much less", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("lt.double"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "<<", name = "Much less", snippetType = "autosnippet", wordTrig = false }, {
-    t("lt.double"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
-
-  s({ trig = "->", name = "Right arrow", snippetType = "autosnippet", wordTrig = false }, {
-    t("arrow.r"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
-
-  s({ trig = "=>", name = "Double right arrow", snippetType = "autosnippet", wordTrig = false }, {
-    t("arrow.r.double"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "->", name = "Right arrow", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("arrow.r"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
+  --
+  -- s({ trig = "=>", name = "Double right arrow", snippetType = "autosnippet", wordTrig = false }, {
+  --   t("arrow.r.double"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "~~", name = "Approximately", snippetType = "autosnippet", wordTrig = false }, {
     t("tilde.op"),
