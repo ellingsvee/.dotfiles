@@ -26,8 +26,13 @@ return {
   -- typst-preview
   {
     "chomosuke/typst-preview.nvim",
-    lazy = false, -- or ft = 'typst'
+    ft = "typst",
     version = "1.*",
-    opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+    opts = {
+      open_cmd = "open -a qutebrowser %s",
+    },
+    keys = {
+      { "<leader>tp", "<cmd>TypstPreview<cr>", ft = "typst", desc = "Typst Preview (qutebrowser)" },
+    },
   },
 }
