@@ -338,11 +338,15 @@ M = {
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "cd", name = "Centered dot", snippetType = "autosnippet", wordTrig = false }, {
-    t("dot.c"),
+    t("dot"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "cir", name = "Circle", snippetType = "autosnippet", wordTrig = false }, {
     t("circle.stroked.small"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+
+  s({ trig = "ss", name = "Subset", snippetType = "autosnippet", wordTrig = false }, {
+    t("subset"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   -- s({ trig = "imp", name = "Implies", snippetType = "autosnippet", wordTrig = false }, {
@@ -376,10 +380,6 @@ M = {
   -- s({ trig = "=>", name = "Double right arrow", snippetType = "autosnippet", wordTrig = false }, {
   --   t("arrow.r.double"),
   -- }, { condition = in_mathzone, show_condition = in_mathzone }),
-
-  s({ trig = "~~", name = "Approximately", snippetType = "autosnippet", wordTrig = false }, {
-    t("tilde.op"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   -- Other
   s({ trig = "del", name = "Partial", snippetType = "autosnippet", wordTrig = false }, {
