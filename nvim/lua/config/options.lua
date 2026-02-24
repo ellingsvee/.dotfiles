@@ -14,6 +14,10 @@ vim.g.lazyvim_picker = "telescope"
 -- enabled with `:LazyExtras`
 vim.g.lazyvim_cmp = "auto"
 
+-- Use copilot's native inline suggestions instead of routing through blink.
+-- This enables accept_word / accept_line keymaps in copilot.lua.
+vim.g.ai_cmp = false
+
 -- Show the current document symbols location from Trouble in lualine
 -- You can disable this for a buffer by setting `vim.b.trouble_lualine = false`
 vim.g.trouble_lualine = false
