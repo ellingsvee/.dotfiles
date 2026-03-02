@@ -1,2 +1,5 @@
 .DS_Store
+github-copilot/apps.json
+*.env
+tokens.json
 nvim.bak
