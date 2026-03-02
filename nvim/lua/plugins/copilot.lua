@@ -20,7 +20,8 @@ return {
     opts = {
       suggestion = {
         keymap = {
-          accept_word = "<C-l>",
+          accept = "<C-a>",
+          accept_word = "<C-g>",
         },
       },
     },
