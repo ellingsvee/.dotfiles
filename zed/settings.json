@@ -7,6 +7,30 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "ssh_connections": [
+    {
+      "host": "office",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/ellingsvee/Code/diffusionmodel"
+          ]
+        }
+      ]
+    }
+  ],
+  "minimap": {
+    "show": "never"
+  },
+  "disable_ai": false,
   "agent": {
     "default_profile": "ask",
     "default_model": {
@@ -39,14 +63,6 @@
         "!basedpyright",
         "...",
       ],
-    },
-  },
-  "lsp": {
-    "tinymist": {
-      "settings": {
-        "exportPdf": "onSave",
-        "outputPath": "$root/$name",
-      },
     },
   },
 }

@@ -22,10 +22,15 @@
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space e": "workspace::ToggleLeftDock",
-      // "space p": "editor::Format",
-      // "space space": "file_finder::Toggle",
+      "ctrl-/": "workspace::ToggleBottomDock",
+      "space p": "editor::Format",
+      "space space": "file_finder::Toggle",
       "shift-l": "pane::ActivateNextItem",
-      "shift-h": "pane::ActivatePreviousItem",
+      "shift-h": "pane::ActivatePrevItem",
+      "space v": "pane::SplitRight",
+      "space w": "pane::CloseActiveItem",
+      "space h": "workspace::ActivateNextPane",
+      "space l": "workspace::ActivatePreviousPane",
     },
   },
   {
@@ -60,12 +65,6 @@
     "bindings": {
       "shift-j": "editor::MoveLineDown",
       "shift-k": "editor::MoveLineUp",
-    },
-  },
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "space e": "workspace::ToggleLeftDock",
     },
   },
 ]
