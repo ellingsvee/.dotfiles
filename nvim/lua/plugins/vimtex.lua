@@ -20,7 +20,9 @@ return {
 
     --vimtex_view_settings
     -- vim.g.vimtex_view_method = "skim"
-    vim.g.vimtex_view_method = "zathura"
-    vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
+    -- vim.g.vimtex_view_method = "zathura"
+    vim.g.vimtex_view_method = "sioyek"
+    -- vim.g.vimtex_view_general_options = "-reuse-instance -forward-search @tex @line @pdf"
+    vim.g.vimtex_view_general_viewer = "sioyek"
   end,
 }

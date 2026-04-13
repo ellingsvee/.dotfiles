@@ -268,16 +268,16 @@ M = {
   --   }),
   -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
-  s({ trig = "int", name = "Integral", snippetType = "autosnippet" }, {
-    t("integral_("),
-    i(1, "a"),
-    t(")^("),
-    i(2, "b"),
-    t(") "),
-    i(3),
-    t(" dif "),
-    i(4, "x"),
-  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  -- s({ trig = "int", name = "Integral", snippetType = "autosnippet" }, {
+  --   t("integral_("),
+  --   i(1, "a"),
+  --   t(")^("),
+  --   i(2, "b"),
+  --   t(") "),
+  --   i(3),
+  --   t(" dif "),
+  --   i(4, "x"),
+  -- }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "opr", name = "Operator name", snippetType = "autosnippet", wordTrig = false }, {
     t('op("'),
@@ -661,6 +661,27 @@ M = {
     t("("),
     i(1),
     t(")"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  s({ trig = "br", name = "Brackets", snippetType = "autosnippet", wordTrig = false }, {
+    t("["),
+    i(1),
+    t("]"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  s({ trig = "cr", name = "Curly brackets", snippetType = "autosnippet", wordTrig = false }, {
+    t("{"),
+    i(1),
+    t("}"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+
+  s({ trig = "ab", name = "Absolute value", snippetType = "autosnippet", wordTrig = false }, {
+    t("|"),
+    i(1),
+    t("|"),
+  }, { condition = in_mathzone, show_condition = in_mathzone }),
+  s({ trig = "no", name = "Norm", snippetType = "autosnippet", wordTrig = false }, {
+    t("||"),
+    i(1),
+    t("||"),
   }, { condition = in_mathzone, show_condition = in_mathzone }),
 
   s({ trig = "lr[", name = "Left-right brackets", snippetType = "autosnippet", wordTrig = false }, {
