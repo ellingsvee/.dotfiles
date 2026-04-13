@@ -81,6 +81,7 @@ alias g='git'
 alias zathura='open -a Zathura' # By default launch zathura in the background
 alias z='open -a Zathura' # By default launch zathura in the background
 alias r="radian" # Use the updated R terminal
+alias sio='open -a Sioyek'
 
 # Tmux attach
 function tat {
@@ -133,3 +134,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
