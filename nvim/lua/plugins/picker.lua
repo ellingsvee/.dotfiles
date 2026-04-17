@@ -4,6 +4,7 @@ return {
   opts = {
     picker = {
       layout = {
+        -- preset = "telescope",
         fullscreen = true,
       },
     },

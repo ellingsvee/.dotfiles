@@ -210,3 +210,5 @@ resample
 SSM
 Resampling
 resampling
+MNIST
+stochasticity
