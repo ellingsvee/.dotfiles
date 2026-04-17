@@ -3,10 +3,12 @@ if [[ -f "/opt/homebrew/bin/brew" ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="/opt/nvim:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.fzf/bin:$PATH"
+
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -48,6 +50,7 @@ autoload -Uz compinit && compinit
 
 
 zinit cdreplay -q
+
 
 # Keybindings
 bindkey -e
@@ -103,7 +106,7 @@ function tat {
 
 
 # Shell integrations
-# eval "$(fzf --zsh)"
+eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 # eval "$(zoxide init zsh --hook none)"
@@ -122,3 +125,22 @@ export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 # Run fastfetch
 # fastfetch
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# opencode
+export PATH=/home/ellingsvee/.opencode/bin:$PATH
+
+# OpenClaw Completion
+source "/home/ellingsvee/.openclaw/completions/openclaw.zsh"
+
+export PATH="/home/ellingsvee/.pixi/bin:$PATH"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/ellingsvee/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
