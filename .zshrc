@@ -78,9 +78,9 @@ alias t='tmux'
 alias c='clear'
 alias lg='lazygit'
 alias g='git'
-alias zathura='open -a Zathura' # By default launch zathura in the background
-alias z='open -a Zathura' # By default launch zathura in the background
-alias r="radian" # Use the updated R terminal
+# alias zathura='open -a Zathura' # By default launch zathura in the background
+# alias z='open -a Zathura' # By default launch zathura in the background
+# alias r="radian" # Use the updated R terminal
 alias sio='open -a Sioyek'
 
 # Tmux attach
@@ -132,7 +132,16 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
+# <<< conda initialize <<< 
+
+# For yazi, to change the directory after running a command
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 
 export NVM_DIR="$HOME/.nvm"
