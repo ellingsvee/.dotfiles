@@ -110,6 +110,9 @@ eval "$(starship init zsh)"
 # Bat theme
 export BAT_THEME="1337"
 
+# Export editor as nvim
+export EDITOR="nvim"
+
 # For using vimtex with Zotero
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 

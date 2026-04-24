@@ -11,11 +11,11 @@ return {
         default_section = "repl",
       },
       windows = {
-        size = 0.25,
+        size = 0.5,
         position = "below",
         terminal = {
-          size = 0.5,
-          position = "left",
+          size = 0.25,
+          position = "below",
           -- List of debug adapters for which the terminal should be ALWAYS hidden
           hide = {},
         },
