@@ -16,8 +16,8 @@ vim.keymap.set(
 -- Keep last yanked when pasting
 vim.keymap.set("v", "p", '"_dP', { desc = "Keep last yanked when pasting", noremap = true, silent = true })
 
--- Make * highlight the current word
-vim.keymap.set("n", "*", "*N", { desc = "Make * highlight the current word", noremap = true, silent = true })
+-- -- Make * highlight the current word
+-- vim.keymap.set("n", "*", "*N", { desc = "Make * highlight the current word", noremap = true, silent = true })
 
 -- -- Quit using C-q
 vim.keymap.set("n", "<C-q>", ":q<CR>", { desc = "Quit current buffer", noremap = true, silent = true })

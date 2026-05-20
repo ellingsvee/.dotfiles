@@ -31,3 +31,21 @@ local opt = vim.opt
 -- Autoread files
 -- Note: You can autoread with the :e command
 opt.autoread = true
+
+-- This apparently makes the ESC more snappy
+-- vim.opt.ttimeout = true
+vim.opt.timeoutlen = 500
+vim.opt.ttimeoutlen = 10
+
+-- Clipboard to out of server
+vim.g.clipboard = {
+  name = "OSC 52",
+  copy = {
+    ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
+  },
+  paste = {
+    ["+"] = require("vim.ui.clipboard.osc52").paste("+"),
+    ["*"] = require("vim.ui.clipboard.osc52").paste("*"),
+  },
+}

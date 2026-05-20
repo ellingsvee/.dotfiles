@@ -81,11 +81,11 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # Aliases
 alias ls='eza'
 alias n='nvim'
-alias nv='nvim'
 alias t='tmux'
 alias c='clear'
 alias lg='lazygit'
 alias g='git'
+alias y='yazi'
 # alias zathura='open -a Zathura' # By default launch zathura in the background
 # alias z='open -a Zathura' # By default launch zathura in the background
 # alias r="radian" # Use the updated R terminal
@@ -120,6 +120,9 @@ export BAT_THEME="1337"
 
 # For using vimtex with Zotero
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+
+# Export my editor
+export EDITOR=nvim
 
 
 # Run fastfetch
