@@ -22,6 +22,11 @@ vim.keymap.set("v", "p", '"_dP', { desc = "Keep last yanked when pasting", norem
 -- -- Quit using C-q
 vim.keymap.set("n", "<C-q>", ":q<CR>", { desc = "Quit current buffer", noremap = true, silent = true })
 
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww ~/.config/tmux/tmux-sessionizer/tmux-sessionizer<CR>", {
+  desc = "Tmux sessionizer",
+  silent = true,
+})
+
 -- Toggle spelllang between English and Norwegian
 vim.keymap.set("n", "<leader>tl", function()
   if vim.opt.spelllang:get()[1] == "en" then
