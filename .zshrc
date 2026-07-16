@@ -88,7 +88,7 @@ alias g='git'
 alias y='yazi'
 # alias zathura='open -a Zathura' # By default launch zathura in the background
 # alias z='open -a Zathura' # By default launch zathura in the background
-# alias r="radian" # Use the updated R terminal
+alias r="radian" # Use the updated R terminal
 alias sio='open -a Sioyek'
 
 # Tmux attach
@@ -138,6 +138,10 @@ export PATH=/home/ellingsvee/.opencode/bin:$PATH
 source "/home/ellingsvee/.openclaw/completions/openclaw.zsh"
 
 export PATH="/home/ellingsvee/.pixi/bin:$PATH"
+
+
+# Some secrets
+source ~/.config/secrets/ntnu
 
 # >>> juliaup initialize >>>
 
